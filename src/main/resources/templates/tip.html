@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="/main.css" rel="stylesheet">
+</head>
+
+
+<div th:replace="~{ nav.html::navbar }"></div>
+<body>
+<form action="/tipadd" method="POST">
+  <input name ="sub"required>
+  <input name = "description"required>
+  <button type="submit">전송</button>
+</form>
+
+<div class="card" th:each="tip : ${tip}">
+    <h4 th:text="${tip.sub+'&nbsp&nbsp&nbsp'}"></h4>
+  <p th:text="${tip.description}"></p>
+</div>
+
+</body>
+</html>
