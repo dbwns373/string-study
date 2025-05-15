@@ -20,12 +20,14 @@
   <p th:text="${i.price + '원' }"></p>
 
   <a th:href="@{'/edit/' +${i.id}}">수정</a>
+
   <span th:onclick="fetch('/item?id=[[${i.id}]]', { method : 'DELETE' })
         .then(r => r.text())
-        .then((a) => {
-        console.log(a)
+        .then(() => {
+        location.reload();
+        })
    ">삭제</span>
-  <!-- console.log(메세지) -->
+  <!-- console.log(메세지) 쓰면 메세지 출력함-->
 
 
 </div>

@@ -1,8 +1,9 @@
-package com.pear.shop;
+package com.pear.shop.Service;
 
+import com.pear.shop.Composition.Item;
+import com.pear.shop.Repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,5 +1,7 @@
-package com.pear.shop;
+package com.pear.shop.Service;
 
+import com.pear.shop.Composition.Tip;
+import com.pear.shop.Repository.TipRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 

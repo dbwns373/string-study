@@ -1,4 +1,4 @@
-package com.pear.shop;
+package com.pear.shop.Composition;
 
 import jakarta.persistence.*;
 

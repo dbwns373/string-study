@@ -1,5 +1,7 @@
-package com.pear.shop;
+package com.pear.shop.Controller;
 
+import com.pear.shop.Composition.Item;
+import com.pear.shop.Service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,7 +20,7 @@ public class ItemContorller {
 //    }
   // ** Lombok 써서 생략된 코드 원래는 이거 써야함
 
-  private final  ItemService itemService; // 이 또한 롬북이 해줘서 생성자 없이 되는거;;아니면 만들어줘야함
+  private final ItemService itemService; // 이 또한 롬북이 해줘서 생성자 없이 되는거;;아니면 만들어줘야함
   // Dependency Injection 이란것 알아두기
 
 
@@ -75,9 +77,6 @@ public class ItemContorller {
   }
   @PostMapping("/update")
   String edit(@RequestParam Integer id ,@RequestParam String title,@RequestParam Integer price) {
-    System.out.println(id);
-    System.out.println(title);
-    System.out.println(price);
 
     itemService.updateItem(id, title, price);
     return "redirect:/list";
@@ -85,11 +84,10 @@ public class ItemContorller {
 
   @DeleteMapping("/item")
   ResponseEntity<String> delete(@RequestParam Integer id) {
+    System.out.println(id);
     itemService.deleteItem(id);
     return ResponseEntity.status(200).body("삭제완료");
   }
-
-
 
 @ExceptionHandler(Exception.class)
   public ResponseEntity<String> handler() {
