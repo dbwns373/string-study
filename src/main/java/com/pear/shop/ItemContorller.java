@@ -82,6 +82,15 @@ public class ItemContorller {
     itemService.updateItem(id, title, price);
     return "redirect:/list";
   }
+
+  @DeleteMapping("/item")
+  ResponseEntity<String> delete(@RequestParam Integer id) {
+    itemService.deleteItem(id);
+    return ResponseEntity.status(200).body("삭제완료");
+  }
+
+
+
 @ExceptionHandler(Exception.class)
   public ResponseEntity<String> handler() {
     return ResponseEntity.status(400).body("에러났음");

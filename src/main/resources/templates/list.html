@@ -11,19 +11,28 @@
 <body>
 <div th:replace="~{ nav.html::navbar }"></div>
 
-<div class="card" th:each="item : ${items}">
+<div class="card" th:each="i : ${items}">
   <img src="https://placehold.co/300">
-  <a th:href="@{'/detail/' +${item.id}}">
+  <a th:href="@{'/detail/' +${i.id}}">
 
-    <h4 th:text="${item.title}"></h4>
+    <h4 th:text="${i.title}"></h4>
   </a>
-  <p th:text="${item.price + '원' }"></p>
-<form>
- <a th:href="@{'/edit/' +${item.id}}">수정</a>
-</form>
+  <p th:text="${i.price + '원' }"></p>
+
+  <a th:href="@{'/edit/' +${i.id}}">수정</a>
+  <span th:onclick="fetch('/item?id=[[${i.id}]]', { method : 'DELETE' })
+        .then(r => r.text())
+        .then((a) => {
+        console.log(a)
+   ">삭제</span>
+  <!-- console.log(메세지) -->
 
 
 </div>
+<!-- <a th:href="@{'/delete/' +${item.id}}">삭제</a> -->
+</div>
+
+<!--btn 클래스를 클릭하면 저 함수를 실행해라 -->
 
 </body>
 </html>
