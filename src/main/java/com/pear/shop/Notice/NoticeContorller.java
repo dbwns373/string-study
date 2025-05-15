@@ -1,7 +1,5 @@
-package com.pear.shop.Controller;
+package com.pear.shop.Notice;
 
-import com.pear.shop.Composition.Notice;
-import com.pear.shop.Service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

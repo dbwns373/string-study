@@ -1,7 +1,7 @@
-package com.pear.shop.Service;
+package com.pear.shop.Notice;
 
-import com.pear.shop.Composition.Notice;
-import com.pear.shop.Repository.NoticeRepository;
+import com.pear.shop.Notice.Notice;
+import com.pear.shop.Notice.NoticeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

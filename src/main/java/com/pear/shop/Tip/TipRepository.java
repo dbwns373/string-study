@@ -1,6 +1,6 @@
-package com.pear.shop.Repository;
+package com.pear.shop.Tip;
 
-import com.pear.shop.Composition.Tip;
+import com.pear.shop.Tip.Tip;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TipRepository extends JpaRepository<Tip, Integer> {

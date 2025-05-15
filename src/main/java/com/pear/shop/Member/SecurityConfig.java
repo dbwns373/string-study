@@ -1,4 +1,4 @@
-package com.pear.shop.Security;
+package com.pear.shop.Member;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,6 @@
-package com.pear.shop.Controller;
+package com.pear.shop.Tip;
 
 
-import com.pear.shop.Composition.Tip;
-import com.pear.shop.Service.TipService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

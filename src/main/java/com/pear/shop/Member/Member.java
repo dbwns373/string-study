@@ -1,4 +1,4 @@
-package com.pear.shop.Composition;
+package com.pear.shop.Member;
 
 import jakarta.persistence.*;
 
@@ -28,6 +28,14 @@ public class Member {
 
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
   @Id

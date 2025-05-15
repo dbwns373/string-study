@@ -1,6 +1,5 @@
-package com.pear.shop.Controller;
+package com.pear.shop.Member;
 
-import com.pear.shop.Service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,7 @@ public class MemberController {
 @PostMapping("/join")
 String join(@RequestParam String username, @RequestParam String password,@RequestParam String displayname){
 
-    memberService.savemember(username,password,displayname);
+    memberService.saveMember(username,password,displayname);
 
     return "signup";
 }
