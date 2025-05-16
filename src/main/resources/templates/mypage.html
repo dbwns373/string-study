@@ -8,24 +8,21 @@
   <title>Document</title>
   <link href="/main.css" rel="stylesheet">
 </head>
-
+<body>
 
 <div th:replace="~{ nav.html::navbar }"></div>
-<body>
-<h4> 가입!</h4>
-<form action="/join" method="POST">
-    <label for="username">ID:</label>
-    <input id="username" name="username">
 
-    <label for="password">비밀번호:</label>
-    <input id="password" name="password" type="password">
 
-    <label for="displayname">닉네임:</label>
-    <input id="displayname" name="displayname">
+<h4> 마이페이지 </h4>
 
-    <button type="submit">signUp</button>
-  </form>
+<div sec:authentication="principal.username"></div>
+<div sec:autorize="hasAuthority('일반유저')">
+  <h4>로그인 한 유저한테만 보이는 글</h4>
+</div>
 
+<a href="/logout">
+  <button>로그아웃</button>
+</a>
 
 </body>
 </html>

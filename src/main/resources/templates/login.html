@@ -12,20 +12,19 @@
 
 <div th:replace="~{ nav.html::navbar }"></div>
 <body>
-<h4> 가입!</h4>
-<form action="/join" method="POST">
-    <label for="username">ID:</label>
-    <input id="username" name="username">
+<h4>로그인 하세요</h4>
 
-    <label for="password">비밀번호:</label>
-    <input id="password" name="password" type="password">
+<div th:if="${param.error}">
+  <h4>아이디 or 비밀번호 틀림</h4>
+</div>
 
-    <label for="displayname">닉네임:</label>
-    <input id="displayname" name="displayname">
+<form action="/login" method="POST">
+  <label for="username">ID:</label>
+  <input id="username" name="username">
 
-    <button type="submit">signUp</button>
-  </form>
-
-
+  <label for="password">비밀번호:</label>
+  <input id="password" name="password" type="password">
+  <button type="submit">sign in</button>
+</form>
 </body>
 </html>

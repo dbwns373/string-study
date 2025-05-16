@@ -1,50 +1,58 @@
 .card {
- margin : 30px auto;
- display : flex;
-}
-.card img {
- width : 150px;
- margin-right : 20px;
+  margin: 30px auto; /* 위아래 여백 30px, 좌우 자동 정렬 (가운데 정렬) */
+  display: flex; /* 내부 요소를 가로로 정렬 */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+.card img {
+  width: 150px; /* 이미지 너비를 150px로 설정 */
+  margin-right: 20px; /* 이미지 오른쪽 여백 추가 */
+}
+
+/* Google Fonts에서 Montserrat 폰트 가져오기 */
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
 .nav {
- display: flex;
- padding: 10px;
- align-items: center;
- font-family : 'Montserrat';
+  display: flex; /* 네비게이션을 가로로 배열 */
+  padding: 10px; /* 내부 여백 10px */
+  align-items: center; /* 내부 요소를 수직 중앙 정렬 */
+  font-family: 'Montserrat'; /* 폰트 적용 */
 }
+
 .nav a {
- margin-right: 10px;
- text-decoration : none;
- font-weight : 400;
- letter-spacing : -0.5px;
+  margin-right: 10px; /* 각 링크 사이의 오른쪽 여백 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  font-weight: 400; /* 기본 글씨 굵기 */
+  letter-spacing: -0.5px; /* 글자 간격을 약간 좁힘 */
 }
+
 .nav .logo {
- font-weight : 800;
+  font-weight: 800; /* 로고 텍스트를 굵게 표시 */
 }
 
 input, button {
- padding : 8px 13px;
- margin-top : 5px;
- border : 1px solid grey;
- border-radius : 4px;
- vertical-align : middle;
+  padding: 8px 13px; /* 내부 여백 설정 */
+  margin-top: 5px; /* 상단 여백 추가 */
+  border: 1px solid grey; /* 테두리를 회색으로 설정 */
+  border-radius: 4px; /* 둥근 테두리 적용 */
+  vertical-align: middle; /* 요소를 수직 중앙 정렬 */
 }
+
 button {
- background : black;
- color : white;
- border : none;
+  background: black; /* 배경을 검은색으로 설정 */
+  color: white; /* 글씨 색상을 흰색으로 설정 */
+  border: none; /* 테두리 제거 */
 }
+
 input {
- display : block;
+  display: block; /* 입력 필드를 블록 요소로 설정 (줄바꿈 효과) */
 }
 
 .detail {
-  text-align : center;
+  text-align: center; /* 내용 가운데 정렬 */
 }
-.detail img{
-  max-width : 30%;
-  display : block;
-  margin : auto;
+
+.detail img {
+  max-width: 30%; /* 이미지 최대 너비를 30%로 제한 */
+  display: block; /* 블록 요소로 변경 (줄바꿈 포함) */
+  margin: auto; /* 중앙 정렬 */
 }

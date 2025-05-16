@@ -27,6 +27,7 @@ public class ItemContorller {
   @GetMapping("/list")
   String list(Model model) {
     List<Item> result = itemService.findAll(); //DB에서 모든아이템가져옴
+    // 뷰로 데이터를 보냄
     model.addAttribute("items",result); //"전달할 데이터이름"," 데이터"
     return "list.html";
   }

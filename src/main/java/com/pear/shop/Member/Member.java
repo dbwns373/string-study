@@ -45,7 +45,7 @@ public class Member {
   private String username;
   @Column(nullable = false)
   private String password;
-  @Column(nullable = false,unique = true)
+  @Column(nullable = false)
   private String displayName;
 
 }
